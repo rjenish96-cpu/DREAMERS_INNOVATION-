@@ -3,142 +3,921 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DREAMERS
-    INNOVATION</title>
+
+    <title>Dreamers Innovation | We Dream. We Build. We Innovate.</title>
+
+    <meta name="description"
+          content="Dreamers Innovation showcases innovative AI, IoT, robotics and smart technology projects from Nepal.">
 
     <style>
-        /* Background */
-        body{
-            margin:0;
-            font-family:Arial, sans-serif;
-            background:#f2f6fb;
-            color:#333;
+
+        /* =========================
+           BASIC SETTINGS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
-        /* Navigation Bar */
-        nav{
-            background:#1f2937;
-            color:white;
-            padding:15px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b14;
+            color: white;
+            line-height: 1.6;
         }
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin-left:20px;
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        /* Hero Section */
-        .hero{
-            text-align:center;
-            padding:70px 20px;
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(7, 11, 20, 0.90);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid #1e293b;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
         }
 
-        .hero h1{
-            font-size:40px;
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .hero p{
-            font-size:18px;
+        .logo-area img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        button{
-            background:#2563eb;
-            color:white;
-            border:none;
-            padding:12px 25px;
-            border-radius:8px;
-            cursor:pointer;
-            font-size:16px;
+        .brand {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        button:hover{
-            background:#1d4ed8;
+        .brand span {
+            color: #38bdf8;
         }
 
-        /* Cards */
-        .container{
-            display:flex;
-            justify-content:center;
-            gap:20px;
-            flex-wrap:wrap;
-            padding:30px;
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
 
-        .card{
-            background:white;
-            width:250px;
-            padding:20px;
-            border-radius:12px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.15);
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
-        .card h3{
-            margin-top:0;
+        .nav-links a:hover {
+            color: #38bdf8;
         }
 
-        /* Footer */
-        footer{
-            background:#1f2937;
-            color:white;
-            text-align:center;
-            padding:20px;
-            margin-top:40px;
+        .store-nav {
+            background: #2563eb;
+            padding: 9px 16px;
+            border-radius: 8px;
+            color: white !important;
         }
+
+        .store-nav:hover {
+            background: #38bdf8;
+            color: #020617 !important;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 88vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 70px 8%;
+
+            background:
+                radial-gradient(circle at 80% 30%, #123a5a 0%, transparent 30%),
+                radial-gradient(circle at 20% 80%, #172554 0%, transparent 30%),
+                #070b14;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .small-title {
+            color: #38bdf8;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 75px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            font-size: 19px;
+            max-width: 580px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .primary-button {
+            background: #2563eb;
+        }
+
+        .primary-button:hover {
+            background: #38bdf8;
+            color: #020617;
+            transform: translateY(-3px);
+        }
+
+        .secondary-button {
+            border: 1px solid #334155;
+            color: #cbd5e1;
+        }
+
+        .secondary-button:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* LOGO */
+
+        .hero-logo {
+            width: 330px;
+            height: 330px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            box-shadow:
+                0 0 40px rgba(56, 189, 248, 0.20);
+
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           ABOUT / MISSION
+        ========================== */
+
+        .mission {
+            background: #0b1120;
+        }
+
+        .mission-box {
+            max-width: 900px;
+            margin: auto;
+
+            text-align: center;
+
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            padding: 40px;
+
+            border-radius: 18px;
+        }
+
+        .mission-box h3 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .mission-box p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+            background: #070b14;
+        }
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 16px;
+
+            padding: 28px;
+
+            transition: 0.35s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #38bdf8;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.35);
+        }
+
+        .project-icon {
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        .project-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT
+        ========================== */
+
+        .achievement {
+            background: #0b1120;
+        }
+
+        .achievement-box {
+            max-width: 900px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 0;
+
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+        }
+
+        .achievement-content {
+            padding: 40px;
+        }
+
+        .achievement-content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .achievement-content p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .achievement-tag {
+            display: inline-block;
+
+            padding: 7px 12px;
+
+            background: #172554;
+
+            color: #38bdf8;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+        }
+
+        .achievement-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(circle, #164e63, #111827 70%);
+            
+            font-size: 70px;
+        }
+
+
+        /* =========================
+           STORE SECTION
+        ========================== */
+
+        .store {
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+        }
+
+        .store-box {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .store-box h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .store-box p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           SOCIAL
+        ========================== */
+
+        .social {
+            text-align: center;
+            background: #070b14;
+        }
+
+        .instagram-button {
+            display: inline-block;
+
+            background: #e1306c;
+
+            padding: 13px 25px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .instagram-button:hover {
+            transform: translateY(-3px);
+            opacity: 0.85;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #020617;
+
+            border-top: 1px solid #1e293b;
+        }
+
+        footer h3 {
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 12px 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 45px;
+
+                padding: 60px 6%;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-logo {
+                width: 220px;
+                height: 220px;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .achievement-box {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement-side {
+                min-height: 180px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <nav>
-        <h2>DREAMERS
-        INNOVATION</h2>
 
-        <div>
-            <a href="achievement.html">Achievement</a>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <a href="index.html" class="logo-area">
+
+            <img src="logo.jpg" alt="Dreamers Innovation Logo">
+
+            <div class="brand">
+                DREAMERS <span>INNOVATION</span>
+            </div>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
             <a href="project.html">Projects</a>
+
+            <a href="achievement.html">Achievements</a>
+
             <a href="about.html">About</a>
+
             <a href="contact.html">Contact</a>
+
+            <!-- CHANGE THIS LINK TO YOUR STORE -->
+            <a
+                href="https://YOUR-STORE-LINK.com"
+                class="store-nav"
+                target="_blank">
+                🛒 Store
+            </a>
+
         </div>
+
     </nav>
 
-    <section class="hero">
-        <h1>Welcome!</h1>
 
-        <p>This is our progress website.</p>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Dreamers Innovation
+            </div>
+
+            <h1>
+                We Dream.<br>
+                We <span>Build.</span><br>
+                We Innovate.
+            </h1>
+
+            <p>
+                We create and showcase innovative projects
+                combining technology, AI, IoT, robotics and
+                creative engineering to build a smarter future.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="project.html"
+                    class="button primary-button">
+                    Explore Our Projects →
+                </a>
+
+                <!-- CHANGE THIS LINK TO YOUR STORE -->
+                <a
+                    href="https://YOUR-STORE-LINK.com"
+                    target="_blank"
+                    class="button secondary-button">
+                    Visit Our Store 🛒
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <img
+            src="logo.jpg"
+            alt="Dreamers Innovation Logo"
+            class="hero-logo">
 
     </section>
-  <div style="text-align:center;">  
-<button onclick="window.open('https://www.instagram.com/dreamers_innovation/', '_blank')">
-    Visit Instagram
-</button>
-</div>
-    <div class="container">
-        
-        <div class="card">
-            <h3> Main Project 1 </h3>
-            <p> project description here.</p>
-        </div>
-        
 
-        <div class="card">
-            <h3> Main Project 2 </h3>
-            <p> project description here.</p>
-        </div>
 
-        <div class="card">
-            <h3> Main Project 3 </h3>
-            <p> project description here.</p>
+
+    <!-- =========================
+         MISSION
+    ========================== -->
+
+    <section class="mission">
+
+        <div class="section-title">
+
+            <h2>What We Do</h2>
+
+            <p>
+                From ideas to real-world projects.
+            </p>
+
         </div>
 
-    </div>
+
+        <div class="mission-box">
+
+            <h3>
+                Turning Ideas Into Reality
+            </h3>
+
+            <p>
+                Dreamers Innovation is a technology-focused
+                team dedicated to creating, experimenting
+                and showcasing innovative projects.
+                We work with technologies such as AI,
+                IoT, robotics and smart systems to solve
+                real-world problems.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="projects" id="projects">
+
+        <div class="section-title">
+
+            <h2>Featured Projects</h2>
+
+            <p>
+                Explore some of the things we're building.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🗑️
+                </div>
+
+                <h3>
+                    SmartBin Nepal
+                </h3>
+
+                <p>
+                    An AI and IoT based smart waste
+                    management concept designed to
+                    improve waste collection and create
+                    cleaner cities.
+                </p>
+
+                <a
+                    href="project.html"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Robotics
+                </h3>
+
+                <p>
+                    Practical robotics projects combining
+                    sensors, microcontrollers and
+                    intelligent automation.
+                </p>
+
+                <a
+                    href="project.html"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    AI Projects
+                </h3>
+
+                <p>
+                    Experimental AI projects designed
+                    to explore how intelligent systems
+                    can solve real-world problems.
+                </p>
+
+                <a
+                    href="project.html"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    IoT & Smart City
+                </h3>
+
+                <p>
+                    Connected systems designed to make
+                    everyday environments smarter,
+                    safer and more efficient.
+                </p>
+
+                <a
+                    href="project.html"
+                    class="project-link">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+    <!-- =========================
+         STORE
+    ========================== -->
+
+    <section class="store">
+
+        <div class="store-box">
+
+            <h2>
+                Like What We Build?
+            </h2>
+
+            <p>
+                Some of our projects and products will
+                be available through our separate online
+                store. Visit our store to discover what
+                you can get from Dreamers Innovation.
+            </p>
+
+
+            <!-- CHANGE THIS LINK -->
+
+            <a
+                href="https://YOUR-STORE-LINK.com"
+                target="_blank"
+                class="button primary-button">
+
+                Visit Our Store →
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SOCIAL
+    ========================== -->
+
+    <section class="social">
+
+        <div class="section-title">
+
+            <h2>Follow Our Journey</h2>
+
+            <p>
+                See our latest projects, experiments
+                and updates.
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://www.instagram.com/dreamers_innovation/"
+            target="_blank"
+            class="instagram-button">
+
+            📸 Follow us on Instagram
+
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
-        <p>Created in 2026 by Jenish Rana </p>
-           <p> founder of dreamers_innovation </p>    </footer>
+
+        <h3>
+            DREAMERS INNOVATION
+        </h3>
+
+        <p>
+            We Dream. We Build. We Innovate.
+        </p>
+
+        <p>
+            © 2026 Dreamers Innovation. All rights reserved.
+        </p>
+
+    </footer>
+
 
 </body>
 </html>
