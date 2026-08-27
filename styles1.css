@@ -1,0 +1,17 @@
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.brand img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.1;
+}
